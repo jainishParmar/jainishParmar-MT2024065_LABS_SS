@@ -6,7 +6,7 @@
 #include <unistd.h>
 #include <sys/time.h>
 
-unsigned long long rdtsc()
+unsigned long long time_stamp()
 {
     unsigned long long dst;
     __asm__ __volatile__("rdtsc" : "=A"(dst));
@@ -19,12 +19,15 @@ int main()
     if (pid == 0)
     {
         long long int start, end;
-
-        start = rdtsc();
-        printf("process_id:= %d\n", getpid());
-        end = rdtsc();
-
+        start = time_stamp();
+        int ans=getpid();
+        end = time_stamp();
+        printf("process_id:= %d\n", ans);
         printf("time taken is : %llu\n", end - start);
     }
     return 0;
 }
+
+//output : 
+// porcess_id:11634
+// time taken is:2951
