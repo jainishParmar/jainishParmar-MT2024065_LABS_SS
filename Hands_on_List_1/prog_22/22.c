@@ -28,3 +28,5 @@ int main(){
     close(fd);
     return 0;
 }
+
+//output in a.txt
