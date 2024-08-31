@@ -23,18 +23,63 @@ int main()
             sched_setscheduler(pid, SCHED_RR, &priority);
             currentPolicy = sched_getscheduler(pid);
             printf("Current policy is %d\n", currentPolicy);
+             switch (currentPolicy)
+            {
+            case SCHED_FIFO:
+                printf("fifo\n");
+                break;
+            case SCHED_RR:
+                printf("rr\n");
+                break;
+            case SCHED_OTHER:
+                printf("other\n");
+                break;
+            
+            default:
+                break;
+            }
             break;
         case SCHED_RR:
             printf("Current policy is RR\n");
             sched_setscheduler(pid, SCHED_FIFO, &priority);
             currentPolicy = sched_getscheduler(pid);
             printf("Current policy is %d\n", currentPolicy);
+             switch (currentPolicy)
+            {
+            case SCHED_FIFO:
+                printf("fifo\n");
+                break;
+            case SCHED_RR:
+                printf("rr\n");
+                break;
+            case SCHED_OTHER:
+                printf("other\n");
+                break;
+            
+            default:
+                break;
+            }
             break;
         case SCHED_OTHER:
             printf("Current policy is OTHER\n");
             sched_setscheduler(pid, SCHED_RR, &priority);
             currentPolicy = sched_getscheduler(pid);
             printf("Current policy is %d\n", currentPolicy);
+            switch (currentPolicy)
+            {
+            case SCHED_FIFO:
+                printf("fifo\n");
+                break;
+            case SCHED_RR:
+                printf("rr\n");
+                break;
+            case SCHED_OTHER:
+                printf("other\n");
+                break;
+            
+            default:
+                break;
+            }
             break;
         default:
             perror("Error while getting current policy\n");
