@@ -11,6 +11,7 @@ int main(){
     char *options = "-Rl";
     char *file_arg = "../../Hands_on_List_1"; 
     execl(command_path, command_path, options, file_arg, NULL);
+    printf("hello return");
     return 0;
 }
 

@@ -10,6 +10,6 @@
 int main(){
 
     char * args[]={"./temp","hello",NULL};
-    execl(args[0],args);
+    execvp(args[0],args);
     return 0;
 }

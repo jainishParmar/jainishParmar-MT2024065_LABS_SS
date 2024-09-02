@@ -13,10 +13,9 @@ int main(){
 
     char* filename="a.txt";
 
-    int fd = open(filename, O_RDONLY);
+    int fd = open(filename, O_WRONLY);
     int fmode = fcntl(fd, F_GETFL);
     printf("%d\n", fmode);
-
     int accessMode = fmode & O_ACCMODE;
     printf("%d\n", accessMode);
 

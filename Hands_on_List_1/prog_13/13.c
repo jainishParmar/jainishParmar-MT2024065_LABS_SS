@@ -13,15 +13,10 @@
 int main(){
 
     fd_set readFDSet, writeFDSet;
-
     struct timeval time;
-
     int returnVal;
-
     FD_SET(STDIN_FILENO, &readFDSet);   
     FD_SET(STDOUT_FILENO, &writeFDSet); 
-
-  
     time.tv_sec = 10;
     time.tv_usec = 0;
     returnVal = select(1, &readFDSet, &writeFDSet, NULL, &time);

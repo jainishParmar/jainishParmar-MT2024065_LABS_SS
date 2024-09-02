@@ -12,7 +12,12 @@ int main()
    if(t==0)
    {
        printf("Child having id %d\n",getpid());
-       sleep(10000); 
+       printf("en");
+       
+       sleep(10);
+              printf("out");
+
+       printf("child's parent id%d\n",getppid()); 
     }
     else
     {

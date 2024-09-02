@@ -42,7 +42,8 @@ int main()
                 perror("Error while writing file using duplicate FD");
             }
         }
-
+        printf("%d\n",fd);
+        printf("%d\n",dfd);
         close(fd);
         close(dfd);
         return 0;

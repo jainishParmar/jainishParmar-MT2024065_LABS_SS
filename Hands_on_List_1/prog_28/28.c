@@ -23,7 +23,6 @@ int main()
         perror("err\n");
     else
         printf("The min priority with FIFO Scheduling Policy is : %d\n", mini);
-
     return 0;
 }
 

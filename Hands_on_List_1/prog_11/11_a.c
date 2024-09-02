@@ -31,12 +31,14 @@ int main()
         {
             perror("Error while writing file using original FD");
         }
-
         flag = write(dfd, "Using duplicate FD\n", 19);
         if (flag == -1)
         {
             perror("Error while writing file using duplicate FD");
         }
+
+        printf("%d\n",fd);
+        printf("%d\n",dfd);
 
         close(fd);
         close(dfd);
