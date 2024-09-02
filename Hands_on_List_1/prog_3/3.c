@@ -8,7 +8,7 @@
 #include<sys/types.h>
 
 int main(){
-    int fd=creat("a.txt",S_IRWXU);
+    int fd=creat("b.txt",0777);
     if(fd==-1){
         perror("error");
         return 0;

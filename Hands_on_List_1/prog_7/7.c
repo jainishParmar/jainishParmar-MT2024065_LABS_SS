@@ -23,7 +23,6 @@ int main()
         _exit(1);
     }
     char buff;
-    int read_flag;
     int write_flag;
     while (read(sfid, &buff, 1))
     {

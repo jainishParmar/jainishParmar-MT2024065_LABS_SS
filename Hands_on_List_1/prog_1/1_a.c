@@ -8,10 +8,7 @@
 
 #include<stdio.h>
 #include<unistd.h>
-
-
 int main(int argc,char* argr[]){
-
     if(argc<2){
         perror("insuffienet argument");
         return 0;
@@ -19,8 +16,6 @@ int main(int argc,char* argr[]){
 
     char* ori_path=argr[1];
     char* dupli_path=argr[2];
-
-
     int st;
     st=link(ori_path,dupli_path);
     if(st==-1){
