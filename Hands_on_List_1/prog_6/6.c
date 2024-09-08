@@ -8,9 +8,8 @@
 
 int main(){
     char *buf;
-
-    read(1,buf,100);
-    write(0,buf,sizeof(buf));
+    read(0,buf,100);
+    write(1,buf,sizeof(buf));
 
     return 0;
 }
