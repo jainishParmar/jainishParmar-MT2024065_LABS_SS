@@ -9,16 +9,12 @@
 #include<sys/wait.h>
 
 int main(){
-
-
     char* filename="a.txt";
-
     int fd = open(filename, O_WRONLY);
     int fmode = fcntl(fd, F_GETFL);
     printf("%d\n", fmode);
     int accessMode = fmode & O_ACCMODE;
     printf("%d\n", accessMode);
-
     switch (accessMode)
     {
     case O_RDWR:
@@ -33,7 +29,6 @@ int main(){
     default:
         break;
     }
-    
     return 0;
 }
 

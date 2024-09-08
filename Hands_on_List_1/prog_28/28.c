@@ -5,13 +5,10 @@
 #include <stdio.h>
 #include <unistd.h>
 #include <stdlib.h>
-
 #include <sched.h>
 int main()
 {
-
     int maxi, mini;
-
     maxi = sched_get_priority_max(SCHED_FIFO);
     if (maxi == -1)
         perror("err\n");

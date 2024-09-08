@@ -9,7 +9,8 @@
 
 int main(){
 
-    char * args[]={"./temp","hello",NULL};
+    char * args[]={"./temp","bye",NULL};
     execvp(args[0],args);
+    printf("again\n");
     return 0;
 }
