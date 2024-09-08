@@ -18,7 +18,7 @@ int main(){
 
 	printf("%d \n",fd);
     }
-	fd =open("../prog_3/a.txt",O_EXCL);
+	fd =open("../prog_3/a.txt",O_EXCL|O_CREAT);
     if(fd==-1){
         perror("error");
         return 0;
