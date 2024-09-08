@@ -43,7 +43,6 @@ int main()
 
     return 0;
 }
-
 /*
 jainish-parmar@jainish-parmar-IdeaPad-5-15ITL05:/media/jainish-parmar/part2/software_system/lab/Hands_on_List_1/prog_8$ cc 8.c
 jainish-parmar@jainish-parmar-IdeaPad-5-15ITL05:/media/jainish-parmar/part2/software_system/lab/Hands_on_List_1/prog_8$ ./a.out

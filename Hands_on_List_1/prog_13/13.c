@@ -12,14 +12,14 @@
 
 int main(){
 
-    fd_set readFDSet, writeFDSet;
+    fd_set readFDSet;
     struct timeval time;
     int returnVal;
     FD_SET(STDIN_FILENO, &readFDSet);   
-    FD_SET(STDOUT_FILENO, &writeFDSet); 
+     
     time.tv_sec = 10;
     time.tv_usec = 0;
-    returnVal = select(1, &readFDSet, &writeFDSet, NULL, &time);
+    returnVal = select(1, &readFDSet, NULL, NULL, &time);
     if (returnVal == -1)
         perror("ERROR ");
     else if (returnVal) 

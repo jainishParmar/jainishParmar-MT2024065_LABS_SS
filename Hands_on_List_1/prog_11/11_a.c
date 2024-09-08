@@ -17,7 +17,6 @@ int main()
     char *filename = "a.txt";
     int fd, dfd;
     int flag;
-
     fd = open(filename, O_WRONLY | O_APPEND);
     if (fd == -1)
     {
