@@ -35,7 +35,7 @@ int main(int argc, char* argv[])
             fcntl(fd, F_SETLK, &lock);
             printf("File is now locked for writing\n");
         }
-        sleep(50);
+        sleep(100);
         return 0;
     }
 }

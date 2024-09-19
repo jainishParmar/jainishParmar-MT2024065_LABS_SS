@@ -10,6 +10,8 @@ a. ITIMER_REAL        b. ITIMER_VIRTUAL        c. ITIMER_PROF
 #include <unistd.h>   
 #include <stdio.h>    
 
+
+
 void main(int argc, char *argv[])
 {
     int timerStatus; 
@@ -25,8 +27,8 @@ void main(int argc, char *argv[])
     if ((int)(*argv[1] - 48) == 1)
     {
         timer.it_interval.tv_sec = 0;
-        timer.it_interval.tv_usec = 0;
-        timer.it_value.tv_sec = 10;
+        timer.it_interval.tv_usec = 300*1000;
+        timer.it_value.tv_sec = 2;
         timer.it_value.tv_usec = 0;
     }
     else if ((int)(*argv[1] - 48) == 2)
