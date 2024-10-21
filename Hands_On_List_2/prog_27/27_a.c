@@ -28,7 +28,8 @@ void main()
         _exit(0);
     }
 
-    queueIdentifier = msgget(queueKey, IPC_CREAT | 0700);
+    // queueIdentifier = msgget(queueKey, IPC_CREAT | 0700);
+    queueIdentifier=3;
 
     if (queueIdentifier == -1)
     {

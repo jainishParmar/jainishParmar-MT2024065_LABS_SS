@@ -38,6 +38,7 @@ void main()
             if (writeBytes == -1)
                 perror("Error while writing to  child to parent pipe!");
 
+            sleep(5);
             readBytes = read(parentToChildfd[0], &readBuffer, 100);
             if (readBytes == -1)
                 perror("Error while reading from parent to child pipe!");
@@ -56,7 +57,7 @@ void main()
                 perror("Error while writing to  parent to child pipe!");
 
            
-
+            sleep(5);
             readBytes = read(childToParentfd[0], &readBuffer, 100);
             if (readBytes == -1)
                 perror("Error while reading from child to parent pipe!");

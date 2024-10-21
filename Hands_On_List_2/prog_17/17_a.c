@@ -19,12 +19,11 @@ void main()
     else
     {
         childPid = fork();
-
         if (childPid == -1)
             perror("Error while forking child!");
         else if (childPid == 0)
         {
-            
+            sleep(5);
             close(STDIN_FILENO);
             dup(pipefd[0]); 
             close(pipefd[1]);
@@ -32,11 +31,11 @@ void main()
         }
         else
         {
-            
             close(STDOUT_FILENO);
             dup(pipefd[1]); 
             close(pipefd[0]);
-            execl("/usr/bin/ls", "ls -l", "-l", NULL);
+            execl("/usr/bin/ls", "ls ", "-l", NULL);
+            sleep(5);
         }
     }
 }

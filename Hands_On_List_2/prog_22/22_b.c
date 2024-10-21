@@ -16,7 +16,7 @@ void main()
     int fileDescriptor, writeBytes;
     char data[100];
 
-    fileDescriptor = open(fifoName, O_NONBLOCK | O_WRONLY);
+    fileDescriptor = open(fifoName, O_WRONLY);
 
     if (fileDescriptor == -1)
     {

@@ -24,17 +24,17 @@ void main()
             perror("Error while forking child!");
         else if (childPid == 0)
         {
-            // Child will enter this branch
+         
             close(STDIN_FILENO);
-            fcntl(pipefd[0], F_DUPFD, STDIN_FILENO); // STDIN will be reassigned to pipefdp[0]
+            fcntl(pipefd[0], F_DUPFD, STDIN_FILENO); 
             close(pipefd[1]);
             execl("/usr/bin/wc", "wc", NULL);
         }
         else
         {
-            // Parent will enter this branch
+            
             close(STDOUT_FILENO);
-            fcntl(pipefd[1], F_DUPFD, STDOUT_FILENO); // STDOUT will be reassigned to pipefd[1]
+            fcntl(pipefd[1], F_DUPFD, STDOUT_FILENO); 
             close(pipefd[0]);
             execl("/usr/bin/ls", "ls -l", "-l", NULL);
         }

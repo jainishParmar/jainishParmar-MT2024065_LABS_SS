@@ -17,12 +17,11 @@ void main()
     pipeOneStatus = pipe(pipeCmdOneToTwo);
     pipeTwoStatus = pipe(pipeCmdTwoToThree);
 
-    if (pipeOneStatus == -1 || pipeTwoStatus)
+    if (pipeOneStatus == -1 || pipeTwoStatus==-1)
         perror("Error while creating the pipe!");
     else
     {
         childOne = fork();
-
         if (childOne == -1)
             perror("Error while creating first child!");
         else if (childOne == 0)
@@ -48,7 +47,6 @@ void main()
 
                 close(pipeCmdOneToTwo[1]); 
                 close(pipeCmdTwoToThree[0]);
-
                 close(STDIN_FILENO);
                 dup2(pipeCmdOneToTwo[0], STDIN_FILENO);
                 close(STDOUT_FILENO);
@@ -65,7 +63,7 @@ void main()
                 close(STDOUT_FILENO);  
                 dup2(pipeCmdOneToTwo[1], STDOUT_FILENO);
 
-                execl("/usr/bin/ls", "ls -l", "-l", NULL);
+                execl("/usr/bin/ls", "ls ", "-l", NULL);
             }
         }
     }

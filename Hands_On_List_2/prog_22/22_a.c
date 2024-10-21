@@ -24,7 +24,7 @@ void main()
 
     init();
 
-    fileDescriptor = open(fifoName, O_NONBLOCK | O_RDONLY);
+    fileDescriptor = open(fifoName,  O_RDONLY);
 
     if (fileDescriptor == -1)
     {

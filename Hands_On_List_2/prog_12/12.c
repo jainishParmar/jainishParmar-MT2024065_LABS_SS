@@ -33,6 +33,7 @@ void main()
             printf("Successfully killed parent!\n");
             sleep(10);
             printf("Child now exiting!\n");
+            printf("Parent PID: %d\n", getppid());
         }
         else
             perror("Error while killing parent!");
@@ -40,6 +41,8 @@ void main()
     else
     {
         while (1){
-        printf("parent execcuting....\n");}
+          printf("parent execcuting....\n");
+          sleep(2);
+        }
     }
 }

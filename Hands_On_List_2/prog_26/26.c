@@ -36,7 +36,7 @@ void main()
         perror("Error while creating message queue!");
         _exit(0);
     }
-
+    printf("msg_queue_id:%d\n",queueIdentifier);
     data.mtype = 1;
     data.someNumber = 100;
 

@@ -27,7 +27,7 @@ void main()
             perror("Error whiling forking new child!");
         else if (childPid == 0)
         {
-            
+            sleep(5);
             readBytes = read(pipefd[0], &readBuffer, sizeof(writeBuffer));
             if (readBytes == -1)
                 perror("Error while reading from pipe!\n");
@@ -36,10 +36,12 @@ void main()
         }
         else
         {
-            sleep(5);
             writeBytes = write(pipefd[1], &writeBuffer, sizeof(writeBuffer));
             if (writeBytes == -1)
                 perror("Error while writing to pipe!");
+            else
+                printf("write op done\n");
+            sleep(5);
         }
     }
 }

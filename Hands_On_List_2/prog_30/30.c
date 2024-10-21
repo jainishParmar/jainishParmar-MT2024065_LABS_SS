@@ -35,7 +35,6 @@ void main()
         perror("Error while getting Shared Memory!");
         _exit(0);
     }
-    // ======================== 1 ========================
     shmPointer = shmat(shmIdentifier, (void *)0, 0);
 
     if (*shmPointer == -1)
@@ -47,16 +46,12 @@ void main()
     printf("Press enter to write to the shared memory!\n");
     getchar();
 
-    sprintf(shmPointer, "prog_30"); // Writing to the shared memory
+    sprintf(shmPointer, "prog_30"); 
 
     printf("Press enter to read from the shared memory!\n");
     getchar();
 
-    printf("Data from shared memory: %s\n", shmPointer); // Reading from the shared memory
-
-    // ===================================================
-
-    // ======================== 2 ========================
+    printf("Data from shared memory: %s\n", shmPointer); 
 
     rdOnlyShmPointer = shmat(shmIdentifier, (void *)0, SHM_RDONLY);
     if (*rdOnlyShmPointer == -1)
@@ -70,21 +65,15 @@ void main()
     printf("Press enter to read from the shared memory!\n");
     getchar();
 
-    printf("Data from shared memory: %s\n", rdOnlyShmPointer); // Reading from the shared memory
+    printf("Data from shared memory: %s\n", rdOnlyShmPointer); 
 
-    // ===================================================
 
-    // ======================== 3 ========================
     printf("Detaching pointer to shared memory!\n");
-    shmdt(shmPointer);       // Dettach pointer to Shared Memory
-    shmdt(rdOnlyShmPointer); // Dettach pointer to Shared Memory
-    // ===================================================
+    shmdt(shmPointer);      
+    shmdt(rdOnlyShmPointer); 
 
-    // ======================== 4 ========================
     printf("Press enter to delete the shared memory!\n");
     getchar();
 
-    // Delete Shared Memory
     shmctl(shmIdentifier, IPC_RMID, NULL);
-    // ===================================================
 }

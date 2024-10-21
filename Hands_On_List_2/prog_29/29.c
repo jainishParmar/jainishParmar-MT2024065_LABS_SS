@@ -23,7 +23,8 @@ void main()
         _exit(0);
     }
 
-    queueIdentifier = msgget(queueKey, IPC_CREAT | 0700);
+    // queueIdentifier = msgget(queueKey, IPC_CREAT | 0700);
+    queueIdentifier=5;
     if (queueIdentifier == -1)
     {
         perror("Error while creating Message Queue!");

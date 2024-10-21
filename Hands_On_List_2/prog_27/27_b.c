@@ -41,7 +41,7 @@ void main()
     messageSize = msgrcv(queueIdentifier, &data, sizeof(data), data.mtype, IPC_NOWAIT);
 
     if(messageSize == -1) {
-        perror("Error while sending getting via Message Queue!");
+        perror("Error while  getting data via Message Queue!");
         _exit(0);
     }
 

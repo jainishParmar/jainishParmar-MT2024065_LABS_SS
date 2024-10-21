@@ -11,17 +11,18 @@ the signal or not.
 #include <signal.h>
 #include <sys/types.h>
 #include <stdlib.h>
-void print()
+void callback()
 {
     printf("Received SIGSTOP");
+     _exit(0);
 }
 void main()
 {
-    printf("%d",getpid());
-    sleep(5);
+    printf("%d\n",getpid());
+    __sighandler_t signalStatus; 
 
-    __sighandler_t status = signal(SIGSTOP, (void *)print);
-    if (status == SIG_ERR)
+    signalStatus = signal(SIGSTOP, (void *)callback);
+    if (signalStatus == SIG_ERR)
     {
         perror("Error while assigning signal handler");
     }
