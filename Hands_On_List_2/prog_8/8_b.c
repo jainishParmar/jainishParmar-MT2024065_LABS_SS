@@ -22,6 +22,7 @@ void main()
     }
     else
     {
-        raise(SIGINT); 
+        while(1);
+
     }
 }

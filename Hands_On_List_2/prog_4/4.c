@@ -1,13 +1,12 @@
 //jainish parmar
 //MT2024065
-//4. Write a program to measure how much time is taken to execute 100 getppid ( ) system call. Use time stamp counter. 
+//4. Write a program to measure how much time is taken to execute 100 getpid ( ) system call. Use time stamp counter. 
 
 
-#include <sys/time.h>  // Import for `gettimeofday` system call
-#include <sys/types.h> // Import for `getpid` system call
-#include <unistd.h>    // Import for `getpid` system call
-#include <stdio.h>     // Import for printf
-
+#include <sys/time.h>  
+#include <sys/types.h> 
+#include <unistd.h>    
+#include <stdio.h>    
 
 
 unsigned long long rdtsc()

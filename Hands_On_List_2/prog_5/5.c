@@ -11,8 +11,8 @@ Write a program to print the system limitation of
  g. number of currently available pages in the physical memory.
 */
 
-#include <unistd.h> // Import for `sysconf`
-#include <stdio.h>  // Import for `printf` & `perror`
+#include <unistd.h> 
+#include <stdio.h>  
 
 void print(char *text, long value, char *unit)
 {

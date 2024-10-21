@@ -22,7 +22,8 @@ void main()
     }
     else
     {
-        raise(SIGFPE); 
+        // raise(SIGFPE); 
+        int a=5/0;
         
     }
 }
