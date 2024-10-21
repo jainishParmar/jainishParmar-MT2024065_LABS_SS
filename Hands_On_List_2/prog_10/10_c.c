@@ -1,3 +1,5 @@
+//jainish parmar
+//MT2024065
 /*
  Write a separate program using sigaction system call to catch the following signals.    a. SIGSEGV    b. SIGINT c. SIGFPE
 */

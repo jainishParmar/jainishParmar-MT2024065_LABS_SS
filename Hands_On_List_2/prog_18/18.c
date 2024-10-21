@@ -1,3 +1,5 @@
+//jainish parmar
+//MT2024065
 //Write a program to find out total number of directories on the pwd.    execute ls -l | grep ^d | wc ? Use only dup2.
 
 

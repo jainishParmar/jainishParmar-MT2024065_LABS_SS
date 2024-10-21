@@ -1,8 +1,12 @@
-#include <sys/types.h> // Import for `open`
-#include <sys/stat.h>  // Import for `open`
-#include <fcntl.h>     // Import for `open`
-#include <unistd.h>    // Import for `read`
-#include <stdio.h>     // Import for `perror` & `printf`
+//jainish parmar
+//MT2024065
+//Write two programs so that both can communicate by FIFO -Use one way communication
+
+#include <sys/types.h> 
+#include <sys/stat.h>  
+#include <fcntl.h>     
+#include <unistd.h>   
+#include <stdio.h>  
 
 void main()
 {

@@ -1,15 +1,8 @@
 
 
-
-
-
-
-
-
-
-
-
-
+//jainish parmar
+//MT2024065
+// Write a program to execute ls -l | wc.    a. use dup    b. use dup2    c. use fcntl
 #include <unistd.h>    
 #include <sys/types.h> 
 #include <stdio.h>    

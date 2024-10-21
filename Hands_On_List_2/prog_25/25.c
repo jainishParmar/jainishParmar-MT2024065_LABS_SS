@@ -1,3 +1,5 @@
+//jainish parmar
+//MT2024065
 /* Question : Write a program to print a message queue's (use `msqid_ds` and `ipc_perm` structures)
     1. Access permission 
     2. `uid`, `gid` 

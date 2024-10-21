@@ -1,11 +1,13 @@
+//jainish parmar
+//MT2024065
 // Question : Write a program to wait for data to be written into FIFO within 10 seconds, use `select` system call with FIFO.
 
-#include <sys/types.h> // Import for `open`, `select`
-#include <sys/stat.h>  // Import for `open`
-#include <fcntl.h>     // Import for `open`
-#include <sys/time.h>  // Import for `select`
-#include <unistd.h>    // Import for `select`, `read`
-#include <stdio.h>     // Import for `perror`
+#include <sys/types.h> 
+#include <sys/stat.h>  
+#include <fcntl.h>     
+#include <sys/time.h>  
+#include <unistd.h>    
+#include <stdio.h>   
 
 #include "./global.h"
 

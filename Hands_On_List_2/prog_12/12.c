@@ -1,3 +1,5 @@
+//jainish parmar
+//MT2024065
 /*
 . Write a program to create an orphan process. Use kill system call to send SIGKILL signal to 
 the parent process from the child process.

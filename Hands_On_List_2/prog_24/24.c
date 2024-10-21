@@ -1,3 +1,5 @@
+//jainish parmar
+//MT2024065
 //Write a program to create a message queue and print the key and message queue id.
 
 #include <sys/types.h>

@@ -1,3 +1,5 @@
+//jainish parmar
+//MT2024065
 // Question : Write a program to receive messages from the message queue with `0` as a flag
 
 #include <sys/types.h> 

@@ -1,3 +1,5 @@
+//jainish parmar
+//MT2024065
 // Question : Write a program to send messages to the message queue. Check `ipcs -q`
 
 #include <sys/types.h> 

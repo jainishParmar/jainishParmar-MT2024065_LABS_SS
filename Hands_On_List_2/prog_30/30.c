@@ -1,3 +1,5 @@
+//jainish parmar
+//MT2024065
 /* Question : Write a program to create a shared memory. 
     1. Write some data to the shared memory
     2. Attach with `O_RDONLY` and check whether you are able to overwrite. 

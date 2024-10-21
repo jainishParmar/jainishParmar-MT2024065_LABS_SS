@@ -1,3 +1,5 @@
+//jainish parmar
+//MT2024065
 // Question : Write two programs so that both can communicate by FIFO - Use two way communications.
 
 #include <sys/types.h> 

@@ -1,3 +1,5 @@
+//jainish parmar
+//MT2024065
 /*
 Write a program to ignore a SIGINT signal then reset the default action of the SIGINT signal -  Use signal system call.
 */

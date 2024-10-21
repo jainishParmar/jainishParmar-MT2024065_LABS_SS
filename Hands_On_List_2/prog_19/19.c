@@ -1,3 +1,7 @@
+//jainish parmar
+//MT2024065
+//Create a FIFO file by    a. mknod command    b. mkfifo command    c. use strace command to find out, which command (mknod or mkfifo) is better.    c. mknod system call    d. mkfifo library function 
+
 #include <sys/types.h> 
 #include <sys/stat.h>  
 #include <fcntl.h>     

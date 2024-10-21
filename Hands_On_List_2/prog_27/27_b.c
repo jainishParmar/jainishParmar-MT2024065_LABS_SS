@@ -1,3 +1,5 @@
+//jainish parmar
+//MT2024065
 // Question : Write a program to receive messages from the message queue with `IPC_NOWAIT` as a flag
 
 #include <sys/types.h> 
@@ -8,14 +10,14 @@
 
 void main()
 {
-    key_t queueKey;      // IPC (Message Queue) key
-    int queueIdentifier; // IPC (Message Queue) identifier
-    ssize_t messageSize; // Determines success of `msgsnd` call
+    key_t queueKey;     
+    int queueIdentifier; 
+    ssize_t messageSize; 
 
     struct msgbuf
     {
-        long mtype;      // Used to identify message type - should be > 0
-        int  someNumber; // Integer data
+        long mtype;      
+        int  someNumber; 
     } data;
 
     queueKey = ftok(".", 1);

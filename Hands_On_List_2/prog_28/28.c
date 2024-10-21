@@ -1,3 +1,5 @@
+//jainish parmar
+//MT2024065
 // Question : Write a program to change the exiting message queue permission. (Use `msqid_ds` structure)
 
 #include <sys/types.h> 

@@ -1,3 +1,7 @@
+//jainish parmar
+//MT2024065
+//. Write a simple program to send some data from parent to the child process
+
 #include <unistd.h>    
 #include <sys/types.h> 
 #include <stdio.h>     

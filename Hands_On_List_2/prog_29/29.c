@@ -1,3 +1,5 @@
+//jainish parmar
+//MT2024065
 // Question : Write a program to remove the message queue.
 
 #include <sys/types.h> 
